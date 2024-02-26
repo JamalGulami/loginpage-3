@@ -17,9 +17,9 @@ class My_textfiled extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 45.0),
-      child: TextField(
+
+
+      return TextField(
         controller: controller,
         obscureText: obscureText,
         textAlign: TextAlign.right,
@@ -30,16 +30,16 @@ class My_textfiled extends StatelessWidget {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
-            borderSide: BorderSide(color: Colors.grey),
+            borderSide: BorderSide(color: Color(0xFF1ED760)),
           ),
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.grey[400]),
+          hintStyle: TextStyle(color: Color(0xFF94A3B8),
+          fontSize: 16),
           fillColor: Colors.grey[200],
           filled: true,
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
         ),
-      ),
     );
   }
 }

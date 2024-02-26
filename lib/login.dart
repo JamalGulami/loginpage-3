@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:loginpage/check_email.dart';
 import 'package:loginpage/component/my_button.dart';
 import 'package:loginpage/component/text_feild.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loginpage/inrol.dart';
+import 'package:loginpage/resset_password.dart';
 class login_page extends StatelessWidget {
 
   login_page({super.key});
@@ -18,14 +20,27 @@ class login_page extends StatelessWidget {
       body: SafeArea(
         child:Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               //SizedBox(height: 10.0),
-              Container(
-                width: 200.0, // Set the desired width
-                height: 200.0, // Set the desired height
-                child: Image.asset('image/mmm.png'),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 73, 0, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 200.0, // Set the desired width
+                      height: 200.0, // Set the desired height
+                      child: Image.asset('image/mmm.png'),
+                    ),
+                    SizedBox(width: 8,),
+                    Container(
+                      alignment: Alignment.topRight,
+                      child: Icon(Icons.exit_to_app),
+                    ),
+                  ],
+                ),
               ),
               Text('ورود',
                 style: TextStyle(fontSize: 22.0,color: Colors.grey[900],
@@ -127,7 +142,7 @@ class login_page extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Inrolment()),
+                      MaterialPageRoute(builder: (context) => Check_email()),
                     );
                   },
                   child: Text(
